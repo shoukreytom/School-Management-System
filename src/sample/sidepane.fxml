@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.Sidepane"
+      prefHeight="400.0" prefWidth="220.0" spacing="20" stylesheets="@sidepane.css" id="base" fx:id="pane">
+    <padding>
+        <Insets top="80" right="20" left="20" bottom="40"/>
+    </padding>
+    <TextField prefWidth="200" prefHeight="35" promptText="Search" >
+        <padding>
+            <Insets left="10"/>
+        </padding>
+    </TextField>
+    <JFXButton text="Dashboard" prefWidth="200" prefHeight="35">
+        <graphic>
+            <FontAwesomeIconView glyphName="HOME" fill="white" glyphSize="20"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton text="Students" prefWidth="200" prefHeight="35" lineSpacing="20">
+        <padding>
+            <Insets left="10"/>
+        </padding>
+        <graphic>
+            <FontAwesomeIconView glyphName="GROUP" fill="white" glyphSize="20"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton text="Teachers" prefWidth="200" prefHeight="35">
+        <graphic>
+            <FontAwesomeIconView glyphName="GROUP" fill="white" glyphSize="20"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton text="Settings" prefWidth="200" prefHeight="35">
+        <graphic>
+            <FontAwesomeIconView glyphName="COG" fill="white" glyphSize="20"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton text="Exit" prefWidth="200" prefHeight="35">
+        <graphic>
+            <FontAwesomeIconView glyphName="SHUTDOWN" fill="white" glyphSize="20"/>
+        </graphic>
+    </JFXButton>
+    <JFXButton text="More" prefWidth="200" prefHeight="35" fx:id="more" onAction="#more">
+        <graphic>
+            <FontAwesomeIconView glyphName="PLUS_CIRCLE" fill="white" glyphSize="20"/>
+        </graphic>
+    </JFXButton>
+<!--    <Button text="Log out" prefWidth="200" prefHeight="30"/>-->
+<!--    <Button text="Update" prefWidth="200" prefHeight="30"/>-->
+<!--    <Button text="Help" prefWidth="200" prefHeight="30"/>-->
+</VBox>

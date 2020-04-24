@@ -1,0 +1,24 @@
+#base {
+    -fx-background-color: #263137;
+}
+.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: #1F4E5A;
+    -fx-border-radius: 30px;
+}
+.button {
+//    -jfx-button-type: RAISED;
+    -fx-background-color: #1F4E5A;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+//    -fx-background-radius: 30px;
+    -fx-cursor: HAND;
+}
+.button:hover {
+    -fx-background-color: #2F5E6A;
+}
+.button:pressed {
+    -fx-background-color: #3F6E7A;
+}
