@@ -13,12 +13,12 @@
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-//    -fx-background-radius: 30px;
+    -fx-background-radius: 10px;
     -fx-cursor: HAND;
 }
 .button:hover {
     -fx-background-color: #2F5E6A;
 }
 .button:pressed {
-    -fx-background-color: #3F6E7A;
+    -fx-background-color: #FFF;
 }

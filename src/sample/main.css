@@ -27,15 +27,21 @@
     -jfx-button-type: RAISED;
     -fx-background-color: #1F4E5A;
     -fx-font-size: 16px;
+    -fx-background-radius: 30px;
 }
 .fields {
-    -fx-pref-height: 35px;
-    -fx-background-color: #3C4A4F;
-    -fx-font-size: 16px;
+    -fx-background-color: transparent;
     -fx-text-fill: white;
+    -fx-pref-height: 40px;
+    -fx-border-color: #1F4E5A;
+    -fx-border-radius: 30px;
 }
 #admin {
     -fx-background-color: #263137;
+}
+.table-view {
+    -fx-border-color: #263137;
+    -fx-background-color: #3C494F;
 }
 
 .table-view .column-header,

@@ -2,6 +2,9 @@ package sample;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
@@ -12,9 +15,9 @@ public class Sidepane {
     @FXML
     private Button more;
     private JFXButton logout = new JFXButton("Log out");
-    private Button update = new Button("Update");
-    private Button help = new Button("Help");
-    private Button less = new Button("Show less");
+    private JFXButton update = new JFXButton("Update");
+    private JFXButton help = new JFXButton("Help");
+    private JFXButton less = new JFXButton("Show less");
 
     public void initialize() {
         logout.setPrefWidth(200);
@@ -39,6 +42,11 @@ public class Sidepane {
         pane.getChildren().add(help);
         pane.getChildren().add(less);
         pane.getChildren().remove(more);
+    }
+
+    @FXML
+    public void loadStudent() throws Exception {
+//        Parent root = FXMLLoader.load(getClass().getResource("/sample/students.fxml"));
     }
 
 }
