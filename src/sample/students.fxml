@@ -17,7 +17,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <BorderPane xmlns="https://javafx.com/javafx" stylesheets="@main.css"
-            xmlns:fx="https://javafx.com/fxml" fx:controller="sample.Students" id="base">
+            xmlns:fx="https://javafx.com/fxml" fx:controller="sample.Students" id="base"
+            minWidth="1000" minHeight="600">
     <left>
         <AnchorPane>
             <JFXDrawer fx:id="drawer" AnchorPane.topAnchor="0" direction="LEFT" visible="false"
@@ -45,9 +46,9 @@
         </TableView>
     </center>
     <right>
-        <GridPane id="admin" fx:id="adminTools" layoutY="50" alignment="CENTER" vgap="25">
+        <GridPane id="admin" maxWidth="300" fx:id="adminTools" layoutY="50" alignment="CENTER" vgap="20">
             <padding>
-                <Insets left="10" right="10"/>
+                <Insets left="10" right="10" top="20"/>
             </padding>
             <VBox alignment="CENTER">
                 <Label text="Admin Panel" GridPane.rowIndex="0" alignment="CENTER" id="adminTitle">
@@ -60,30 +61,29 @@
                 <padding>
                     <Insets left="30" right="30" top="50" bottom="50"/>
                 </padding>
-                <TextField promptText="student's name" styleClass="fields">
+                <TextField promptText="student's name" styleClass="fields" fx:id="fName">
                     <padding>
                         <Insets left="15"/>
                     </padding>
                 </TextField>
-                <TextField promptText="student's class" styleClass="fields">
+                <TextField promptText="student's class" styleClass="fields" fx:id="fClass">
                     <padding>
                         <Insets left="15"/>
                     </padding>
                 </TextField>
-                <TextField promptText="student's address" styleClass="fields">
+                <TextField promptText="student's address" styleClass="fields" fx:id="fAddress">
                     <padding>
                         <Insets left="15"/>
                     </padding>
                 </TextField>
-                <TextField promptText="phone number" styleClass="fields">
+                <TextField promptText="phone number" styleClass="fields" fx:id="fPhone">
                     <padding>
                         <Insets left="15"/>
                     </padding>
                 </TextField>
-                <Label fx:id="msg" />
                 <HBox alignment="CENTER" spacing="20">
-                    <JFXButton text="Submit" styleClass="controls"/>
-                    <JFXButton text="Reset" styleClass="controls"/>
+                    <JFXButton text="Submit" styleClass="controls" onAction="#submit"/>
+                    <JFXButton text="Reset" styleClass="controls" onAction="#reset"/>
                 </HBox>
             </VBox>
         </GridPane>

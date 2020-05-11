@@ -1,17 +1,20 @@
 package sample;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import javafx.animation.Interpolator;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.scene.control.SplitPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+
+import java.io.IOException;
 
 public class Students {
 
@@ -30,10 +33,20 @@ public class Students {
     @FXML
     private TableColumn<String, StudentsModel> className;
     @FXML
+    private TableColumn<String, StudentsModel> address;
+    @FXML
     private TableColumn<String, StudentsModel> phone;
+    @FXML
+    private TextField fName;
+    @FXML
+    private TextField fClass;
+    @FXML
+    private TextField fAddress;
+    @FXML
+    private TextField fPhone;
 
     @FXML
-    public void initialize() throws Exception{
+    public void initialize() throws Exception {
         /////////// SidePane ///////////////////
         VBox vBox = FXMLLoader.load(getClass().getResource("/sample/sidepane.fxml"));
         drawer.setSidePane(vBox);
@@ -47,13 +60,34 @@ public class Students {
                 hamburger.setPrefWidth(40d);
                 drawer.setDefaultDrawerSize(40d);
                 drawer.setVisible(false);
-            }
-            else {
+            } else {
                 drawer.open();
             }
         });
         //////////////////////////////////////////////////////////////////
+    }
 
+    @FXML
+    public void submit() throws InterruptedException, IOException {
+        Validator validator = new Validator();
+        if (validator.validatePhone(fPhone.getText())) {
+            // add student to database
+        } else {
+            Alert error = new Alert(Alert.AlertType.ERROR);
+            HBox hBox = new HBox();
+            error.setResult(ButtonType.CLOSE);
+            error.setTitle("Error");
+            error.setContentText("Invalid phone number");
+            error.show();
+        }
+    }
+
+    @FXML
+    public void reset() {
+        fName.setText("");
+        fClass.setText("");
+        fAddress.setText("");
+        fPhone.setText("");
     }
 
 }
