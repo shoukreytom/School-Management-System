@@ -1,4 +1,4 @@
-package sample;
+package sample.view;
 
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import sample.model.TeachersModel;
 
 public class Teachers {
 
@@ -22,7 +23,7 @@ public class Teachers {
 
     @FXML
     public void initialize() throws Exception{
-        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/sidepane.fxml"));
+        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/view/sidepane.fxml"));
         drawer.setSidePane(vBox);
         drawer.setDefaultDrawerSize(hamburger.getPrefWidth());
 //        HamburgerBackArrowBasicTransition h = new HamburgerBackArrowBasicTransition(hamburger);

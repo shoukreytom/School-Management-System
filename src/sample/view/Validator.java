@@ -1,4 +1,4 @@
-package sample;
+package sample.view;
 
 public class Validator {
 

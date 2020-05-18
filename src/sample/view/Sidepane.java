@@ -1,4 +1,4 @@
-package sample;
+package sample.view;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import sample.Main;
 
 public class Sidepane {
 
@@ -46,7 +47,7 @@ public class Sidepane {
 
     @FXML
     public void loadStudent() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/sample/students.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/students.fxml"));
         Main.stage.setScene(new Scene(root, Main.stage.getWidth(), Main.stage.getHeight()));
     }
 

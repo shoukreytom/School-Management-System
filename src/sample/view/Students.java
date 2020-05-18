@@ -1,18 +1,13 @@
-package sample;
+package sample.view;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
-import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
-import javafx.animation.Interpolator;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
+import sample.model.StudentsModel;
 
 import java.io.IOException;
 
@@ -48,7 +43,7 @@ public class Students {
     @FXML
     public void initialize() throws Exception {
         /////////// SidePane ///////////////////
-        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/sidepane.fxml"));
+        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/view/sidepane.fxml"));
         drawer.setSidePane(vBox);
         drawer.setDefaultDrawerSize(hamburger.getPrefWidth());
         hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
@@ -71,7 +66,7 @@ public class Students {
     public void submit() throws InterruptedException, IOException {
         Validator validator = new Validator();
         if (validator.validatePhone(fPhone.getText())) {
-            // add student to database
+            // add student to database priority
         } else {
             Alert error = new Alert(Alert.AlertType.ERROR);
             HBox hBox = new HBox();
