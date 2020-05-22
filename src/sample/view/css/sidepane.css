@@ -1,5 +1,6 @@
 #base {
     -fx-background-color: #263137;
+    -fx-border-color: #374248;
 }
 .text-field {
     -fx-background-color: transparent;

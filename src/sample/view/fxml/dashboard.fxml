@@ -9,12 +9,13 @@
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.geometry.Insets?>
 <?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.scene.chart.PieChart?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="sample.view.control.Dashboard"
-            prefHeight="400.0" prefWidth="600.0">
+            minHeight="600.0" minWidth="1000.0">
     <left>
-        <AnchorPane>
+        <AnchorPane style="-fx-background-color: #3C494F">
             <JFXDrawer fx:id="drawer" AnchorPane.topAnchor="0" direction="LEFT" visible="false"
                        AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"/>
             <JFXHamburger fx:id="hamburger" prefWidth="40" prefHeight="40"
@@ -25,4 +26,9 @@
             </JFXHamburger>
         </AnchorPane>
     </left>
+    <center>
+        <GridPane style="-fx-background-color: #263137">
+            <PieChart />
+        </GridPane>
+    </center>
 </BorderPane>
