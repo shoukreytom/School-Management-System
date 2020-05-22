@@ -10,8 +10,8 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXButton?>
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.view.Sidepane"
-      prefHeight="400.0" prefWidth="220.0" spacing="20" stylesheets="@sidepane.css" id="base" fx:id="pane">
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.view.control.Sidepane"
+      prefHeight="400.0" prefWidth="220.0" spacing="20" stylesheets="@../css/sidepane.css" id="base" fx:id="pane">
     <padding>
         <Insets top="80" right="20" left="20" bottom="40"/>
     </padding>

@@ -16,8 +16,8 @@
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-<BorderPane xmlns="https://javafx.com/javafx" stylesheets="@main.css"
-            xmlns:fx="https://javafx.com/fxml" fx:controller="sample.view.Teachers" id="base">
+<BorderPane xmlns="https://javafx.com/javafx" stylesheets="@../css/main.css"
+            xmlns:fx="https://javafx.com/fxml" fx:controller="sample.view.control.Teachers" id="base">
     <left>
         <AnchorPane>
             <JFXDrawer fx:id="drawer" AnchorPane.topAnchor="0" direction="LEFT" visible="false"

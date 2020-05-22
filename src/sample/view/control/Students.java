@@ -1,4 +1,4 @@
-package sample.view;
+package sample.view.control;
 
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
@@ -43,7 +43,7 @@ public class Students {
     @FXML
     public void initialize() throws Exception {
         /////////// SidePane ///////////////////
-        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/view/sidepane.fxml"));
+        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/view/fxml/sidepane.fxml"));
         drawer.setSidePane(vBox);
         drawer.setDefaultDrawerSize(hamburger.getPrefWidth());
         hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {

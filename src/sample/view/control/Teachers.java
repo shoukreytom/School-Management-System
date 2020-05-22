@@ -1,4 +1,4 @@
-package sample.view;
+package sample.view.control;
 
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
@@ -23,7 +23,7 @@ public class Teachers {
 
     @FXML
     public void initialize() throws Exception{
-        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/view/sidepane.fxml"));
+        VBox vBox = FXMLLoader.load(getClass().getResource("/sample/view/fxml/sidepane.fxml"));
         drawer.setSidePane(vBox);
         drawer.setDefaultDrawerSize(hamburger.getPrefWidth());
 //        HamburgerBackArrowBasicTransition h = new HamburgerBackArrowBasicTransition(hamburger);
