@@ -54,13 +54,13 @@ public class Sidepane {
     @FXML
     public void loadTeachers() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/fxml/teachers.fxml"));
-        Main.stage.setScene(new Scene(root, Main.stage.getWidth(), Main.stage.getHeight()));
+        Main.stage.setScene(new Scene(root, Main.stage.getWidth()+200, Main.stage.getHeight()));
     }
 
     @FXML
     public void loadStudents() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/fxml/students.fxml"));
-        Main.stage.setScene(new Scene(root, Main.stage.getWidth(), Main.stage.getHeight()));
+        Main.stage.setScene(new Scene(root, Main.stage.getWidth()+200, Main.stage.getHeight()));
     }
 
 }
