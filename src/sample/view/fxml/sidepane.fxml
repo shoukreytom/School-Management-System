@@ -7,7 +7,7 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import com.jfoenix.controls.JFXButton?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.view.control.Sidepane"
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.view.control.SidePane"
       prefHeight="400.0" prefWidth="220.0" spacing="20" stylesheets="@../css/sidepane.css" id="base" fx:id="pane">
     <padding>
         <Insets top="80" right="20" left="20" bottom="40"/>
@@ -40,7 +40,7 @@
             <FontAwesomeIconView glyphName="COG" fill="white" glyphSize="20"/>
         </graphic>
     </JFXButton>
-    <JFXButton text="Exit" prefWidth="200" prefHeight="35" fx:id="exit">
+    <JFXButton text="Exit    " prefWidth="200" prefHeight="35" fx:id="exit">
         <graphic>
             <FontAwesomeIconView glyphName="POWER_OFF" fill="white" glyphSize="20"/>
         </graphic>
@@ -50,7 +50,4 @@
             <FontAwesomeIconView glyphName="PLUS_CIRCLE" fill="white" glyphSize="20"/>
         </graphic>
     </JFXButton>
-<!--    <Button text="Log out" prefWidth="200" prefHeight="30"/>-->
-<!--    <Button text="Update" prefWidth="200" prefHeight="30"/>-->
-<!--    <Button text="Help" prefWidth="200" prefHeight="30"/>-->
 </VBox>
