@@ -36,6 +36,7 @@ public class Sidepane {
             pane.getChildren().add(more);
         });
         exit.setOnAction((e) -> {
+            Main.stage.close();
             System.exit(0);
         });
         System.out.println(Main.stage.getWidth());
@@ -51,7 +52,13 @@ public class Sidepane {
     }
 
     @FXML
-    public void loadStudent() throws Exception {
+    public void loadTeachers() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/view/fxml/teachers.fxml"));
+        Main.stage.setScene(new Scene(root, Main.stage.getWidth(), Main.stage.getHeight()));
+    }
+
+    @FXML
+    public void loadStudents() throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/sample/view/fxml/students.fxml"));
         Main.stage.setScene(new Scene(root, Main.stage.getWidth(), Main.stage.getHeight()));
     }

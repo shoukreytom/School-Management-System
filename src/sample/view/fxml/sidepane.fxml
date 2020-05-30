@@ -25,7 +25,7 @@
             <FontAwesomeIconView glyphName="HOME" fill="white" glyphSize="20"/>
         </graphic>
     </JFXButton>
-    <JFXButton text="Students" prefWidth="200" prefHeight="35" lineSpacing="20" onAction="#loadStudent">
+    <JFXButton text="Students" prefWidth="200" prefHeight="35" lineSpacing="20" onAction="#loadStudents">
         <padding>
             <Insets left="10"/>
         </padding>
@@ -33,7 +33,7 @@
             <FontAwesomeIconView glyphName="GROUP" fill="white" glyphSize="20"/>
         </graphic>
     </JFXButton>
-    <JFXButton text="Teachers" prefWidth="200" prefHeight="35">
+    <JFXButton text="Teachers" prefWidth="200" prefHeight="35" onAction="#loadTeachers">
         <graphic>
             <FontAwesomeIconView glyphName="GROUP" fill="white" glyphSize="20"/>
         </graphic>
