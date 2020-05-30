@@ -43,7 +43,7 @@
             <FontAwesomeIconView glyphName="COG" fill="white" glyphSize="20"/>
         </graphic>
     </JFXButton>
-    <JFXButton text="Exit" prefWidth="200" prefHeight="35">
+    <JFXButton text="Exit" prefWidth="200" prefHeight="35" fx:id="exit">
         <graphic>
             <FontAwesomeIconView glyphName="POWER_OFF" fill="white" glyphSize="20"/>
         </graphic>

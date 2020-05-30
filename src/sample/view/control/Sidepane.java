@@ -15,6 +15,8 @@ public class Sidepane {
     private VBox pane;
     @FXML
     private Button more;
+    @FXML
+    private Button exit;
     private JFXButton logout = new JFXButton("Log out");
     private JFXButton update = new JFXButton("Update");
     private JFXButton help = new JFXButton("Help");
@@ -32,6 +34,9 @@ public class Sidepane {
         less.setOnAction((e) -> {
             pane.getChildren().removeAll(logout, update, help, less);
             pane.getChildren().add(more);
+        });
+        exit.setOnAction((e) -> {
+            System.exit(0);
         });
         System.out.println(Main.stage.getWidth());
     }
