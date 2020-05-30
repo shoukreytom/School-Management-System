@@ -44,8 +44,11 @@ public class Students {
     public void initialize() throws Exception {
         /////////// SidePane ///////////////////
         VBox vBox = FXMLLoader.load(getClass().getResource("/sample/view/fxml/sidepane.fxml"));
+        vBox.getChildren().get(2).setStyle("-fx-background-color: #3C494F;");
         drawer.setSidePane(vBox);
-        drawer.setDefaultDrawerSize(hamburger.getPrefWidth());
+        drawer.setDefaultDrawerSize(vBox.getPrefWidth());
+        drawer.setVisible(true);
+        drawer.open();
         hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
             drawer.setVisible(true);
             drawer.setDefaultDrawerSize(vBox.getPrefWidth());
